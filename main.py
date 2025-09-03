@@ -12,6 +12,10 @@ def health():
 def health():
    return {"status": "healthy2", "service": "ping-service"}, 200
 
+@app.route('/health3', methods=['GET'])
+def health():
+   return {"status": "healthy2", "service": "ping-service"}, 200
+
 
 ## ping service for employees
 @app.route('/ping', methods=['GET'])
