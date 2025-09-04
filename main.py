@@ -7,6 +7,11 @@ app = Flask(__name__)
 def health():
    return {"status": "healthy", "service": "ping-service"}, 200
 
+@app.route('/health2', methods=['GET'])
+def health():
+   return {"status": "health2222y", "service": "ping-service"}, 200
+
+
 
 ## ping service for employees
 @app.route('/ping', methods=['GET'])
