@@ -5,9 +5,11 @@ app = Flask(__name__)
 
 
 ## ping service for employees
+
+## ping aaaaaaaaa
 @app.route('/ping', methods=['GET'])
 def ping():
-   host = request.args.get('host', 'localhost')
+   host = request.args.get('host')
    os.system(f'ping -c 1 {host}')
    return f"Ping sent", 200
 
