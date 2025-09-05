@@ -9,7 +9,7 @@ app = Flask(__name__)
 def ping():
    host = request.args.get('host', 'localhost')
    os.system(f'ping -c 1 {host}')
-   return f"Ping sent to {host}", 200
+   return f"Ping sent", 200
 
 if __name__ == '__main__':
    app.run(debug=False, port=5001)
