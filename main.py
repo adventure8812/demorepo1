@@ -6,12 +6,16 @@ app = Flask(__name__)
 
 ## ping service for employees
 
-## ping aaaaaaaaa
-@app.route('/ping', methods=['GET'])
+# change route
+
+
+
+
+@app.route('/ping1', methods=['GET'])
 def ping():
-   host = request.args.get('host')
+   host = request.args.get('host1')
    os.system(f'ping -c 1 {host}')
    return f"Ping sent", 200
 
 if __name__ == '__main__':
-   app.run(debug=False, port=5001)
+   app.run(debug=False, port=5002)
