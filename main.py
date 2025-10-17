@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 @app.route('/ping1', methods=['GET'])
 def ping():
-   host = request.args.get('host1')
+   host = request.args.get('host12')
    os.system(f'ping -c 1 {host}')
    return f"Ping sent", 200
 
